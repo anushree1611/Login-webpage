@@ -2,26 +2,34 @@
 <html>
 <head>
     <title>Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2>Dashboard</h2>
+<div class="container">
+    <h2>Dashboard</h2>
 
-<form method="post">
-    <input name="title" placeholder="New item" required>
-    <button>Add</button>
-</form>
+    <!-- Add item form -->
+    <form method="post">
+        <input type="text" name="title" placeholder="Enter new item" required>
+        <button type="submit">Add Item</button>
+    </form>
 
-<ul>
-    {% for item in items %}
-        <li>
-            {{ item[1] }}
-            <a href="/delete/{{ item[0] }}">Delete</a>
-        </li>
-    {% endfor %}
-</ul>
+    <!-- Items list -->
+    <ul class="item-list">
+        {% for item in items %}
+            <li class="item">
+                <span class="item-text">{{ item[1] }}</span>
+                <a href="/delete/{{ item[0] }}" class="delete-btn">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
 
-<a href="/logout">Logout</a>
+    <!-- Logout -->
+    <a href="/logout" class="logout">Logout</a>
+</div>
 
 </body>
 </html>
