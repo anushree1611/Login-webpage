@@ -1,6 +1,6 @@
 📌 Project Overview
 
-This project is a simple web application developed as part of the VirtuBox “Digitize Your Business” assessment.
+This project is a simple web application developed as part of the VirtuBox assessment.
 The application demonstrates authentication and CRUD operations using a clean and minimal approach.
 
 The focus of this project is on correctness, clarity, and working functionality, not on complex UI design.
