@@ -94,7 +94,6 @@ CRUD Test Cases
 📂 Project Structure
 Login-webpage/
 ├── app.py
-├── README.md
 ├── database.db
 ├── templates/
 │   ├── login.html
